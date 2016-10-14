@@ -24,7 +24,7 @@ var cube = new THREE.Mesh(geometry, material);
 scene.add( cube );
 cube.rotation.x += 0.5;
 
-geometry = new THREE.SphereGeometry( 90, 32, 32 );
+geometry = new THREE.SphereGeometry( 10, 32, 32 );
 material = new THREE.MeshBasicMaterial();
 material.map = THREE.ImageUtils.loadTexture('images/galaxy_starfield.png');
 material.side = THREE.BackSide;
@@ -37,6 +37,7 @@ var render = function () {
   requestAnimationFrame( render );
   
   cube.rotation.y += 0.001;
+  mesh.rotation.y += 0.0001;
   
   renderer.render(scene, camera);
 };
