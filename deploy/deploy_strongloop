@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cd /home/ubuntu/priceatronic/
+
+slc build
+
+slc ctl env-set priceatronic PORT=8080
+
+slc deploy --service=priceatronic

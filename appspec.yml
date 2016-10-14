@@ -1,0 +1,9 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/priceatronic
+hooks:
+  AfterInstall:
+    - location: deploy/deploy_strongloop
+      runas: root
